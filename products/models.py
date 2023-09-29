@@ -20,7 +20,7 @@ class Product(models.Model):
     image = models.ImageField(_('Image'),upload_to='products')
     price = models.FloatField(_('Price'))
     flag = models.CharField(_('Flag'),max_length=10,choices=FLAG_TYPES)
-    brand = models.ForeignKey('Brand',verbos_name=_('Brand'),related_name='product_brand',on_delete=models.SET_NULL,null=True,blank=True)
+    brand = models.ForeignKey('Brand',verbose_name=_('Brand'),related_name='product_brand',on_delete=models.SET_NULL,null=True,blank=True)
     sku = models.CharField(_('SKU'),max_length=12)
     quantity = models.IntegerField(_('Quantity'))
     tags = TaggableManager()
@@ -31,7 +31,7 @@ class Product(models.Model):
 
 
     def save(self,*args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.name)
         super(Product,self).save(*args, **kwargs)
 
 class ProductImages(models.Model):
@@ -49,7 +49,7 @@ class Brand(models.Model):
         return self.name
 
     def save(self,*args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.name)
         super(Brand,self).save(*args, **kwargs)
 
 
