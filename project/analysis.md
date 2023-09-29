@@ -12,8 +12,10 @@ Product :
         - rate
         - feedback
         - creation date
+        - product
     - subtitle
     - quantity
+    - tags
 
 
 brand :
