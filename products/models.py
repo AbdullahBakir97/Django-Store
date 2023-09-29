@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from taggit.managers import TaggableManager
 from django.utils.text import slugify
+from django.utils.translation import gettext_lazy as _
 
 FLAG_TYPES =(
     ('Sale','Sale'),
@@ -13,15 +14,15 @@ FLAG_TYPES =(
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=120)
-    subtitle = models.TextField(max_length=500)
-    description = models.TextField(max_length=100000)
-    image = models.ImageField(upload_to='products')
-    price = models.FloatField()
-    flag = models.CharField(max_length=10,choices=FLAG_TYPES)
-    brand = models.ForeignKey('Brand',related_name='product_brand',on_delete=models.SET_NULL,null=True,blank=True)
-    sku = models.CharField(max_length=12)
-    quantity = models.IntegerField()
+    name = models.CharField(_('Name'),max_length=120)
+    subtitle = models.TextField(_('Subtitle'),max_length=500)
+    description = models.TextField(_('Description'),max_length=100000)
+    image = models.ImageField(_('Image'),upload_to='products')
+    price = models.FloatField(_('Price'))
+    flag = models.CharField(_('Flag'),max_length=10,choices=FLAG_TYPES)
+    brand = models.ForeignKey('Brand',verbos_name=_('Brand'),related_name='product_brand',on_delete=models.SET_NULL,null=True,blank=True)
+    sku = models.CharField(_('SKU'),max_length=12)
+    quantity = models.IntegerField(_('Quantity'))
     tags = TaggableManager()
     slug = models.SlugField(null=True,blank=True)
 
