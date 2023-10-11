@@ -13,7 +13,6 @@ A comprehensive e-commerce platform powered by Django, designed to simplify onli
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -86,8 +85,3 @@ Tailor your online store to your brand and style. Customize settings in the `set
 
 Join our community and contribute to shaping the future of e-commerce. We welcome enhancements, bug fixes, and new features. Please review our [contribution guidelines](CONTRIBUTING.md).
 
-## License
-
-Django Store is open-source and licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-Elevate your online retail game with Django Store. Create, customize, and conquer the e-commerce world.
