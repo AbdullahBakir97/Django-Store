@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'en/css/product-details.css' %}">
+{% endblock css %}
 
 {% block body %}
 
@@ -34,11 +39,9 @@
                                 <label class="details-label off">-10%</label>
                             </div>
                             <ul class="details-preview"> 
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
+                                {% for image in object.product_images.all %}
+                                <li><img src="{{image.image.url}}" alt="product"></li>
+                                {% endfor %}
                             </ul>
                             <ul class="details-thumb">
                                 <li><img src="images/product/01.jpg" alt="product"></li>
