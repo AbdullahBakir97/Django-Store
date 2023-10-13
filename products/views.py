@@ -10,3 +10,7 @@ class ProductList(generic.ListView):
 
 class ProductDetail(generic.DetailView):
     model = Product
+
+
+class BrandList(generic.ListView):
+    model = Brand
