@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # 3th apps
     "taggit",
+    "faker",
 
     # my apps
     'products',
