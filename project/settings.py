@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     # 3th apps
     "taggit",
     "faker",
+    'rest_framework',
+    'django_filters',
 
     # my apps
     'products',
