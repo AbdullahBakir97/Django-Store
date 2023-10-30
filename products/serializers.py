@@ -83,6 +83,7 @@ class BrandListSerializer(serializers.ModelSerializer):
         
         
 class BrandDetailSerializer(serializers.ModelSerializer):
+    product_brand = ProductListSerializer(many=True)
     class Meta:
         model = Brand
         fields = '__all__'
