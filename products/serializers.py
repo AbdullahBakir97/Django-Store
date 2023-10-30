@@ -7,7 +7,8 @@ class BrandSerializer(serializers.ModelSerializer):
      class Meta:
         model = Brand
         fields = '__all__'
-
+        
+#show review_count , avg_rate in detail
 class ProductListSerializer(serializers.ModelSerializer):
     brand = serializers.StringRelatedField()
     review_count = serializers.SerializerMethodField()
