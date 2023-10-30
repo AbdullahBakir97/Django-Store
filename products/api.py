@@ -4,6 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import ProductSerializer , BrandSerializer
 from .models import Product , Brand
 from .mypagination import MyPagination
+from .myfilter import ProductFilter
 
 
 
@@ -16,6 +17,7 @@ class ProductListAPI(generics.ListAPIView):
     filterset_fields = ['flag', 'brand']
     search_fields = ['name', 'subtitle', 'description']
     ordering_fields = ['price', 'quantity']
+    filterset_class = ProductFilter
 
 
 class ProductDetailAPI(generics.RetrieveAPIView):
