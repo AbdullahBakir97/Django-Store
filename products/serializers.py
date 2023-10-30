@@ -8,7 +8,15 @@ class BrandSerializer(serializers.ModelSerializer):
         model = Brand
         fields = '__all__'
 
-class ProductSerializer(serializers.ModelSerializer):
+class ProductListSerializer(serializers.ModelSerializer):
+    brand = BrandSerializer()
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+
+
+class ProductDetailSerializer(serializers.ModelSerializer):
     brand = BrandSerializer()
     class Meta:
         model = Product
@@ -17,3 +25,15 @@ class ProductSerializer(serializers.ModelSerializer):
 
 
 
+class BrandListSerializer(serializers.ModelSerializer):
+     class Meta:
+        model = Brand
+        fields = '__all__'
+
+
+
+
+class BrandDetailSerializer(serializers.ModelSerializer):
+     class Meta:
+        model = Brand
+        fields = '__all__'
