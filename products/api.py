@@ -12,9 +12,10 @@ from .mypagination import MyPagination
 class ProductListAPI(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend , filters.SearchFilter]
+    filter_backends = [DjangoFilterBackend , filters.SearchFilter , filters.OrderingFilter]
     filterset_fields = ['flag', 'brand']
     search_fields = ['name', 'subtitle', 'description']
+    ordering_fields = ['price', 'quantity']
 
 
 class ProductDetailAPI(generics.RetrieveAPIView):
