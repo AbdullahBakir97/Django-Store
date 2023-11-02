@@ -1,4 +1,4 @@
-products : - reviews - brand detail - pagination - queryset api
+products : - reviews - brand detail - pagination - home - queryset api
 
 api :
 
