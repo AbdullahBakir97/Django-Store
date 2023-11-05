@@ -10,6 +10,12 @@ def brand_list(request):
     return render(request, 'html', {'brands': data}) # {'brands': data} --> context method(extra data) , html = template
 
 
+def mydebug(request):
+    data = Product.objects.select_related('brand').all()
+    return render(request,'products/debug.html',{'data':data})
+
+
+
 
 class ProductList(generic.ListView):
     model = Product
