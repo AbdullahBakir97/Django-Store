@@ -44,11 +44,9 @@
                                 {% endfor %}
                             </ul>
                             <ul class="details-thumb">
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
-                                <li><img src="images/product/01.jpg" alt="product"></li>
+                                {% for image in object.product_images.all %}
+                                <li><img src="{{image.image.url}}" alt="product"></li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -70,7 +68,7 @@
                             <h3 class="details-price">
                                 <span>${{object.price}}</span>
                             </h3>
-                            <p class="details-desc">{{object.}}</p>
+                            <p class="details-desc">{{object.subtitle}}</p>
                             <div class="details-list-group">
                                 <label class="details-list-title">tags:</label>
                                 <ul class="details-tag-list">
