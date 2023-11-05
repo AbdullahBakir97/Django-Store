@@ -2,8 +2,6 @@
 Amazon Clone Using Python , Django and Django Rest Framework with full api. Store containes Products and Products Detail, Brands, Reviews, Orders, Payments Methods, Users accounts.
 To improve the content of your README file for the "Django-Store" project, you can make it more engaging and informative by adding some context and additional details. Here's an enhanced version of the content with improvements and 
 
-### Project Live :
-https://AbdullahBakir97.github.io/Django-Store/
 
 # Django-Store: Empowering Your E-Commerce Venture
 
