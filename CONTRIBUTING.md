@@ -1,5 +1,4 @@
 
-```markdown
 # Django Store Contribution Guidelines
 
 Thank you for considering contributing to Django Store! We appreciate your interest in helping us improve our project. Whether you want to enhance the platform, fix bugs, or introduce new features, your contributions are valued.
