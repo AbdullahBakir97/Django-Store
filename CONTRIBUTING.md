@@ -17,27 +17,37 @@ Before you start contributing, please read our [Code of Conduct](CODE_OF_CONDUCT
    ```bash
    git clone https://github.com/YourUsername/Django-Store.git
 
-	3.	Create a Branch: Create a new branch for your contribution.
 
-git checkout -b feature/your-feature
+3. **Create a Branch**: Create a new branch for your contribution.
 
+   ```bash
+   git checkout -b feature/your-feature
 
-	4.	Make Changes: Make your desired changes, additions, or fixes to the codebase.
-	5.	Testing: Ensure that your changes don’t introduce new issues and that existing tests pass.
-	6.	Commit Changes: Commit your changes with a clear and descriptive commit message.
+4. **Make Changes**: Make your desired changes, additions, or fixes to the codebase.
 
-git commit -m "Add your message here"
+   ```bash
+   # Add your changes here
 
+5.	**Testing**: Ensure that your changes don’t introduce new issues and that existing tests pass.
+   
+   ```bash
+   # Run tests and ensure they pass
 
-	7.	Push Changes: Push your branch to your forked repository on GitHub.
+6.	**Commit Changes**: Commit your changes with a clear and descriptive commit message.
 
-git push origin feature/your-feature
+   ```bash
+   git commit -m "Add your message here"
 
+7.	**Push Changes**: Push your branch to your forked repository on GitHub.
 
-	8.	Create a Pull Request: Open a new pull request from your branch to the main Django Store repository. Make sure to provide a detailed description of your changes.
-	9.	Review and Discussion: The maintainers and community will review your pull request, provide feedback, and discuss any necessary changes.
-	10.	Merge: Once your pull request is approved, it will be merged into the main repository.
+   ```bash
+   git push origin feature/your-feature
 
+8.	**Create a Pull Request**: Open a new pull request from your branch to the main Django Store repository. Make sure to provide a detailed description of your changes.
+
+9.	**Review and Discussion**: The maintainers and community will review your pull request, provide feedback, and discuss any necessary changes.
+
+10. **Merge**: Once your pull request is approved, it will be merged into the main repository.
 Issues
 
 If you’d like to report a bug or suggest an enhancement, please create a GitHub issue in the Issue Tracker.
