@@ -92,4 +92,4 @@ If you have questions or need assistance, please reach out to our community on o
 We appreciate your contributions and look forward to working together to make Django Store even better!
 
 Happy coding! 🚀
-```
+
