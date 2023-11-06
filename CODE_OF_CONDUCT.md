@@ -1,6 +1,3 @@
-Sure! Here's a sample CODE_OF_CONDUCT.md file that you can use, ready to copy and paste:
-
-```
 # Code of Conduct
 
 We, as members and contributors, pledge to follow the principles outlined in this Code of Conduct in order to create a safe and welcoming community for everyone. By participating in our community, you agree to abide by this Code of Conduct.
@@ -32,7 +29,3 @@ If you witness or experience any form of harassment, discrimination, or any othe
 ## Conclusion
 
 By participating in our community, you agree to abide by this Code of Conduct. We are committed to creating an inclusive and welcoming environment where everyone can feel safe and supported. Together, let's foster a positive and productive community experience for all members.
-
-```
-
-Feel free to customize it according to your specific needs and requirements.
