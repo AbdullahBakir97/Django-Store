@@ -100,6 +100,5 @@ We invite you to join our community and contribute to shaping the future of e-co
 ## License
 
 Django-Store is open-source and licensed under the MIT License. You can find the full license text in the [LICENSE](LICENSE) file.
-
 Elevate your online retail game with Django-Store. Create, customize, and conquer the e-commerce world. Join our community, contribute to shaping the future of e-commerce, and be part of this exciting journey.
 
