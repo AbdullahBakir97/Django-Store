@@ -1,7 +1,9 @@
 # Django-Store
-Amazon Clone Using Python , Django and Django Rest Framework with full api. Store containes Products and Products Detail, Brands, Reviews, Orders, Payments Methods, Users accounts.
-To improve the content of your README file for the "Django-Store" project, you can make it more engaging and informative by adding some context and additional details. Here's an enhanced version of the content with improvements and 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-brightgreen)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-4.2%2B-brightgreen)](https://www.djangoproject.com/)
 
+Amazon Clone Using Python , Django and Django Rest Framework with full api. Store containes Products and Products Detail, Brands, Reviews, Orders, Payments Methods, Users accounts.
 
 # Django-Store: Empowering Your E-Commerce Venture
 
@@ -102,6 +104,5 @@ We invite you to join our community and contribute to shaping the future of e-co
 ## License
 
 Django-Store is open-source and licensed under the MIT License. You can find the full license text in the [LICENSE](LICENSE) file.
-
 Elevate your online retail game with Django-Store. Create, customize, and conquer the e-commerce world. Join our community, contribute to shaping the future of e-commerce, and be part of this exciting journey.
-```
+
