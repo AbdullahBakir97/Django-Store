@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from products.models import Product , Brand , Review
+from django.views.decorators.cache import cache_page
 
 
+@cache_page(60 * 24 * 60)
 def home(request):
     brands = Brand.objects.all()[:10]
     sale_products = Product.objects.filter(flag='Sale')[:10]

@@ -5,12 +5,14 @@ from django.views import generic
 from .models import Product , Brand , Review
 from django.db.models import Q , Value , F
 from django.db.models.aggregates import Count , Min , Max , Avg , Sum
+from django.views.decorators.cache import cache_page
 
 def brand_list(request):
     data = Brand.objects.all() # query --> method --> change data main query
     return render(request, 'html', {'brands': data}) # {'brands': data} --> context method(extra data) , html = template
 
 
+@cache_page(60 * 15)
 def mydebug(request):
     #data = Product.objects.filter(price__gte=90)     # gte = more than or equall
     #data = Product.objects.filter(price__lte=90)     # lte = lees than or equall
@@ -52,7 +54,9 @@ def mydebug(request):
 
 
     #data = Product.objects.annotate(is_new=Value(True))     # is_new= name , Value will add new column when data return from database , the new column will not be added to database 
-    data = Product.objects.annotate(price_with_tax=F('price')*1.25)     # price_with_tax = name , F to add and handel column from database and add a mathematical eqution on it when data return from data base , the new column will not be added to database
+    #data = Product.objects.annotate(price_with_tax=F('price')*1.25)     # price_with_tax = name , F to add and handel column from database and add a mathematical eqution on it when data return from data base , the new column will not be added to database
+
+    data = Product.objects.all()
 
     return render(request,'products/debug.html',{'data':data})
 
