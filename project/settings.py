@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     # my apps
     'products',
     'settings',
+    'orders',
+    
 ]
 
 # restapi settings
