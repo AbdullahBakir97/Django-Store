@@ -9,4 +9,5 @@ def get_cart_data(request):
         return {'cart_data':cart , 'cart_detail_data':cart_detail}
     
     else:
+        print('in else')
         return{}

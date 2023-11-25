@@ -47,7 +47,15 @@ class Cart(models.Model):
     cart_total_discount = models.FloatField(null=True,blank=True)
 
     def __str__(self):
-        return str(self.user)
+        return f"{str(self.user)} - {self.status}"
+    
+
+    def cart_total(self):
+        total = 0
+        for item in self.cart_detail.all():
+            total += item.total
+
+        return total
 
 class CartDetail(models.Model):
     cart = models.ForeignKey(Cart,related_name='cart_detail',on_delete=models.CASCADE)
