@@ -1,0 +1,136 @@
+
+
+
+//========================================
+//          NAVBAR LAYOUT STYLE
+//========================================
+.navbar-part {
+    background: var(--white);
+}
+
+.navbar-content {
+    border-top: 1px solid var(--border);
+    @include flex__center__between;
+}
+
+.navbar-list {
+    @include flex__center__start;
+}
+
+.navbar-item {
+    margin-left: 30px;
+
+    &:last-child {
+        margin-left: 0px;
+    }
+}
+
+.navbar-link {
+    padding: 22px 0px;
+    font-weight: 500;
+    color: var(--text);
+    text-transform: capitalize;
+    @include cursor__transition;
+
+    &:hover {
+        color: var(--primary);
+    }
+}
+
+.navbar-focus-list {
+    @include flex__center__end;
+
+    li {
+        margin-right: 30px;
+
+        &:first-child {
+            margin-right: 0px;
+        }
+
+        a {
+            font-weight: 500;
+            color: var(--text);
+            text-transform: capitalize;
+            @include cursor__transition;
+
+            &:hover {
+                color: var(--primary);
+            }
+
+            i {
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+
+.navbar-info-group {
+    @include flex__center;
+}
+
+.navbar-info {
+    margin-left: 30px;
+    @include flex__center__start;
+
+    &:last-child {
+        margin-left: 0px;
+    }
+
+    i {
+        font-size: 30px;
+        margin-left: 15px;
+        color: var(--primary);
+    }
+
+    p {
+        small {
+            font-size: 14px;
+            line-height: 16px;
+            display: block;
+            text-align: right;
+            text-transform: capitalize;
+        }
+
+        span {
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+}
+
+//========================================
+//    RESPONSIVE NAVBAR LAYOUT STYLE
+//========================================
+@media (max-width: 991px) {
+    .navbar-part {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-list {
+        li {
+            margin-left: 18px;
+        }
+    }
+
+    .navbar-link {
+        font-size: 15px;
+    }
+
+    .navbar-info {
+        margin-left: 15px;
+
+        p {
+            span {
+                font-size: 14px;
+            }
+        }
+
+        i {
+            margin-left: 10px;
+        }
+    }
+}
