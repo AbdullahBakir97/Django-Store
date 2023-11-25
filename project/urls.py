@@ -43,6 +43,7 @@ urlpatterns = [
     path('',home),
     path('admin/', admin.site.urls),
     path('products/' , include('products.urls')),
+    path('orders/' , include('orders.urls' , namespace='orders')),
 
     # debug_toolbar
    path("__debug__/", include("debug_toolbar.urls")),
