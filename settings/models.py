@@ -26,7 +26,6 @@ class Company(models.Model):
 
 
 class DeliveryFee(models.Model):
-    
     fee = models.FloatField()
 
     def __str__(self):
