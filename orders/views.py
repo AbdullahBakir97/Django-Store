@@ -5,7 +5,7 @@ from products.models import Product
 
 
 def order_list(request):
-    orders = Order.objects.all()
+    orders = Order.objects.filter(user=request.user)
     return render(request,'orders/orderlist.html',{'orders':orders})
 
 
