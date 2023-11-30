@@ -54,7 +54,7 @@
                         {% for object in orders %}
                             <div class="orderlist">
                                 <div class="orderlist-head">
-                                    <h5>order#01</h5>
+                                    <h5> {{ forloop.counter }} </h5>
                                     <h5>order {{object.status}}</h5>
                                 </div>
                                 <div class="orderlist-body">
@@ -89,7 +89,7 @@
                                                 </li>
                                                 <li>
                                                     <h6>Total Item</h6>
-                                                    <p>6 Items</p>
+                                                    <p>{{object.orderdetail.count}}</p>
                                                 </li>
                                                 <li>
                                                     <h6>Order Time</h6>
@@ -107,19 +107,19 @@
                                             <ul class="orderlist-details">
                                                 <li>
                                                     <h6>Sub Total</h6>
-                                                    <p>$10,864.00</p>
+                                                    <p>${{sub_total}}</p>
                                                 </li>
                                                 <li>
                                                     <h6>discount</h6>
-                                                    <p>$20.00</p>
+                                                    <p>${{discount}}</p>
                                                 </li>
                                                 <li>
                                                     <h6>delivery fee</h6>
-                                                    <p>$49.00</p>
+                                                    <p>${{delivery_fee}}</p>
                                                 </li>
                                                 <li>
                                                     <h6>Total<small>(Incl. VAT)</small></h6>
-                                                    <p>$10,874.00</p>
+                                                    <p>${{total}}</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -145,7 +145,7 @@
                                                     <tbody>
                                                         {% for item in object.order_detail.all %}
                                                             <tr>
-                                                                <td class="table-serial"><h6>01</h6></td>
+                                                                <td class="table-serial"><h6> {{ forloop.counter }} </h6></td>
                                                                 <td class="table-image"><img src="{{item.product.image.url}}" alt="product"></td>
                                                                 <td class="table-name"><h6>{{item.product}}</h6></td>
                                                                 <td class="table-price"><h6>${{item.product.price}}<small>/kilo</small></h6></td>

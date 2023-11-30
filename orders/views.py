@@ -1,12 +1,28 @@
 from django.shortcuts import render , redirect
-from .models import Cart , CartDetail , Order
+from .models import Cart , CartDetail , Order , Coupon
 from products.models import Product
 from settings.models import DeliveryFee
 
 
 def order_list(request):
     orders = Order.objects.filter(user=request.user)
-    return render(request,'orders/orderlist.html',{'orders':orders})
+    cart = Cart.objects.get(user=request.user , status='Inprogress')
+    cart_detail = CartDetail.objects.filter(cart=cart)
+    delivery_fee = DeliveryFee.objects.last().fee
+
+    sub_total = cart.cart_total()
+    discount = 0
+    total = sub_total + delivery_fee
+
+    return render(request,'orders/orderlist.html',{
+        'orders':orders ,
+        'cart_detail': cart_detail ,
+        'delivery_fee': delivery_fee ,
+        'sub_total': sub_total ,
+        'discount': discount ,
+        'total': total ,
+
+    })
 
 
 
