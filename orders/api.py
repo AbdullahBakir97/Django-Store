@@ -53,3 +53,28 @@ class ApplyCouponAPI(generics.GenericAPIView):
             
         
         return Response({'message':'coupon not found or coupon ended '})
+    
+
+
+class CartCreateDetailDeleteAPI(generics.GenericAPIView):
+
+    def get(self,request,*args, **kwargs):
+        """ get or create cart """
+        user = User.objects.get(username=self.kwargs['username'])
+        cart , created = Cart.objects.get_or_create(user=request.user , status='Inprogress')
+        data = CartSerializer(cart).data
+        return Response({'cart':data})
+
+    def post(self,request,*args, **kwargs):
+        """ add or update """
+        user = User.objects.get(username=self.kwargs['username'])
+
+
+    def delete(self,request,*args, **kwargs):
+
+        user = User.objects.get(username=self.kwargs['username'])
+        cart = Cart.objects.get(user=request.user , status='Inprogress')
+        product = CartDetail.objects.get(id=request.data['product_id'])
+
+        product.delete()
+        return Response({'massage':'item was deleted successfuly'})
