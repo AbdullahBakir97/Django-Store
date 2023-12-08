@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_yasg',
     "debug_toolbar",
-
+    'dj_rest_auth',
+    
 
     # my apps
     'products',
