@@ -19,7 +19,7 @@ class ProductListAPI(generics.ListAPIView):
     search_fields = ['name', 'subtitle', 'description']
     ordering_fields = ['price', 'quantity']
     filterset_class = ProductFilter
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
 
 class ProductDetailAPI(generics.RetrieveAPIView):

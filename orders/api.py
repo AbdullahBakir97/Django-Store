@@ -6,6 +6,7 @@ import datetime
 from .models import Cart , CartDetail , Order , OrderDetail , Coupon
 from .serializers import CartSerializer , CartDetailSerializer , OrderSerializer , OrderDetailSerializer
 from settings.models import DeliveryFee
+from products.models import Product
 
 
 class OrderListAPI(generics.ListAPIView):
@@ -30,7 +31,7 @@ class ApplyCouponAPI(generics.GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         user = User.objects.get(username=self.kwargs['username'])
-        cart = Cart.objects.get(user=request.user , status='Inprogress')
+        cart = Cart.objects.get(user=user , status='Inprogress')
         cart_detail = CartDetail.objects.filter(cart=cart)
         delivery_fee = DeliveryFee.objects.last().fee
         sub_total = cart.cart_total()
@@ -57,23 +58,33 @@ class ApplyCouponAPI(generics.GenericAPIView):
 
 
 class CartCreateDetailDeleteAPI(generics.GenericAPIView):
+    serializer_class = CartSerializer
 
     def get(self,request,*args, **kwargs):
         """ get or create cart """
         user = User.objects.get(username=self.kwargs['username'])
-        cart , created = Cart.objects.get_or_create(user=request.user , status='Inprogress')
+        cart , created = Cart.objects.get_or_create(user=user , status='Inprogress')
         data = CartSerializer(cart).data
         return Response({'cart':data})
 
     def post(self,request,*args, **kwargs):
         """ add or update """
         user = User.objects.get(username=self.kwargs['username'])
+        product = Product.objects.get(id=request.data['product_id'])
+        quantity = int(request.data['quantity'])
 
+        cart = Cart.objects.get(user=request.user , status='Inprogress')
+        cart_detail,created = CartDetail.objects.get_or_create(cart=cart , product=product)
+
+        cart_detail.quantity = quantity
+        cart_detail.total = round(quantity * product.price,2)
+        cart_detail.save()
+        return Response({'massege':'product was addedd successufly'})
 
     def delete(self,request,*args, **kwargs):
 
         user = User.objects.get(username=self.kwargs['username'])
-        cart = Cart.objects.get(user=request.user , status='Inprogress')
+        cart = Cart.objects.get(user=  user , status='Inprogress')
         product = CartDetail.objects.get(id=request.data['product_id'])
 
         product.delete()
