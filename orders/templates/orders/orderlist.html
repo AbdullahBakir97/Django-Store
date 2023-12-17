@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'en/css/orderlist.css' %}">
 {% endblock css %}
@@ -15,10 +16,10 @@
         =======================================-->
         <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
             <div class="container">
-                <h2>Order History</h2>
+                <h2>{% translate "Order History" %}</h2>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Orderlist</li>
+                    <li class="breadcrumb-item"><a href="index.html">{% translate "others" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "Orderlist" %}</li>
                 </ol>
             </div>
         </section>
@@ -35,15 +36,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="orderlist-filter">
-                            <h5>total order <span>- (4)</span></h5>
+                            <h5>{% translate "total order " %}<span>- (4)</span></h5>
                             <div class="filter-short">
-                                <label class="form-label">short by:</label>
+                                <label class="form-label">{% translate "short by" %}:</label>
                                 <select class="form-select">
-                                    <option value="all" selected>all order</option>
-                                    <option value="recieved">recieved order</option>
-                                    <option value="processed">processed order</option>
-                                    <option value="shipped">shipped order</option>
-                                    <option value="delivered">delivered order</option>
+                                    <option value="all" selected>{% translate "all order" %}</option>
+                                    <option value="recieved">{% translate "recieved order" %}</option>
+                                    <option value="processed">{% translate "processed order" %}</option>
+                                    <option value="shipped">{% translate "shipped order" %}</option>
+                                    <option value="delivered">{% translate "delivered order" %}</option>
                                 </select>
                             </div>
                         </div>
@@ -55,7 +56,7 @@
                             <div class="orderlist">
                                 <div class="orderlist-head">
                                     <h5> {{ forloop.counter }} </h5>
-                                    <h5>order {{object.status}}</h5>
+                                    <h5>{% translate "order" %} {{object.status}}</h5>
                                 </div>
                                 <div class="orderlist-body">
                                     <div class="row">
@@ -64,19 +65,19 @@
                                                 <ul class="order-track-list">
                                                     <li class="order-track-item active">
                                                         <i class="icofont-check"></i>
-                                                        <span>order recieved</span>
+                                                        <span>{% translate "order recieved" %}</span>
                                                     </li>
                                                     <li class="order-track-item {% if object.status == 'Processed' or object.status == 'Shipped' or object.status == 'Delivered' %}active{% endif %}">
                                                         <i class="icofont-{% if object.status == 'Processed' or object.status == 'Shipped' or object.status == 'Delivered' %}check{% else %}close{% endif %}"></i>
-                                                        <span>order processed</span>
+                                                        <span>{% translate "order processed" %}</span>
                                                     </li>
                                                     <li class="order-track-item {% if object.status == 'Shipped' or object.status == 'Delivered' %}active{% endif %}">
                                                         <i class="icofont-{% if object.status == 'Shipped' or object.status == 'Delivered' %}check{% else %}close{% endif %}"></i>
-                                                        <span>order shipped</span>
+                                                        <span>{% translate "order shipped" %}</span>
                                                     </li>
                                                     <li class="order-track-item {% if object.status == 'Delivered' %}active{% endif %}">
                                                         <i class="icofont-{% if object.status == 'Delivered' %}check{% else %}close{% endif %}"></i>
-                                                        <span>order delivered</span>
+                                                        <span>{% translate "order delivered" %}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -84,21 +85,19 @@
                                         <div class="col-lg-5">
                                             <ul class="orderlist-details">
                                                 <li>
-                                                    <h6>order id</h6>
+                                                    <h6>{% translate "order id" %}</h6>
                                                     <p>{{object.code}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>Total Item</h6>
+                                                    <h6>{% translate "Total Item" %}</h6>
                                                     <p>{{object.orderdetail.count}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>Order Time</h6>
-                                                    <p>7th February 2021</p>
+                                                    <h6>{% translate "Order Time" %}</h6>
                                                     <p>{{object.order_time}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>Delivery Time</h6>
-                                                    <p>12th February 2021</p>
+                                                    <h6>{% translate "Delivery Time" %}</h6>
                                                     <p>{{object.delivery_time}}</p>
                                                 </li>
                                             </ul>
@@ -106,26 +105,26 @@
                                         <div class="col-lg-4">
                                             <ul class="orderlist-details">
                                                 <li>
-                                                    <h6>Sub Total</h6>
+                                                    <h6>{% translate "Sub Total" %}</h6>
                                                     <p>${{sub_total}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>discount</h6>
+                                                    <h6>{% translate "discount" %}</h6>
                                                     <p>${{discount}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>delivery fee</h6>
+                                                    <h6>{% translate "delivery fee" %}</h6>
                                                     <p>${{delivery_fee}}</p>
                                                 </li>
                                                 <li>
-                                                    <h6>Total<small>(Incl. VAT)</small></h6>
+                                                    <h6>{% translate "Total" %}<small>(Incl. VAT)</small></h6>
                                                     <p>${{total}}</p>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="orderlist-deliver">
-                                                <h6>Delivery location</h6>
+                                                <h6>{% translate "Delivery location" %}</h6>
                                                 <p>{{object.delivery_location}}</p>
                                             </div>
                                         </div>
@@ -134,12 +133,12 @@
                                                 <table class="table-list">
                                                     <thead>
                                                         <tr>
-                                                            <th scope="col">Serial</th>
-                                                            <th scope="col">Product</th>
-                                                            <th scope="col">Name</th>
-                                                            <th scope="col">Price</th>
-                                                            <th scope="col">brand</th>
-                                                            <th scope="col">quantity</th>
+                                                            <th scope="col">{% translate "Serial" %}</th>
+                                                            <th scope="col">{% translate "Product" %}</th>
+                                                            <th scope="col">{% translate "Name" %}</th>
+                                                            <th scope="col">{% translate "Price" %}</th>
+                                                            <th scope="col">{% translate "brand" %}</th>
+                                                            <th scope="col">{% translate "quantity" %}</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -148,7 +147,7 @@
                                                                 <td class="table-serial"><h6> {{ forloop.counter }} </h6></td>
                                                                 <td class="table-image"><img src="{{item.product.image.url}}" alt="product"></td>
                                                                 <td class="table-name"><h6>{{item.product}}</h6></td>
-                                                                <td class="table-price"><h6>${{item.product.price}}<small>/kilo</small></h6></td>
+                                                                <td class="table-price"><h6>${{item.product.price}}<small>/{% translate "kilo" %}</small></h6></td>
                                                                 <td class="table-brand"><h6>{{item.product.brand}}</h6></td>
                                                                 <td class="table-quantity"><h6>{{item.quantity}}</h6></td>
                                                             </tr>

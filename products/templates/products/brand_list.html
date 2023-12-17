@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'en/css/brand-list.css' %}">
 {% endblock css %}
@@ -19,10 +20,10 @@
         =======================================-->
         <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
             <div class="container">
-                <h2>brand list</h2>
+                <h2>{% translate "brand list" %}brand list</h2>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">brand-list</li>
+                    <li class="breadcrumb-item"><a href="index.html">{% translate "Home" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% translate "brand-list" %}</li>
                 </ol>
             </div>
         </section>
@@ -40,7 +41,7 @@
                     <div class="col-lg-12">
                         <div class="top-filter">
                             <div class="filter-show">
-                                <label class="filter-label">Show :</label>
+                                <label class="filter-label">{% translate "Show" %} :</label>
                                 <select class="form-select filter-select">
                                     <option value="1">12</option>
                                     <option value="2">24</option>
@@ -48,21 +49,21 @@
                                 </select>
                             </div>
                             <div class="filter-short">
-                                <label class="filter-label">Short by :</label>
+                                <label class="filter-label">{% translate "Short by" %} :</label>
                                 <select class="form-select filter-select isotope-select">
-                                    <option value="*">show all</option>
-                                    <option value=".vegetables">vegetables</option>
-                                    <option value=".fruits">fruits</option>
-                                    <option value=".drinks">drinks</option>
-                                    <option value=".fishes">fishes</option>
-                                    <option value=".meats">meats</option>
+                                    <option value="*">{% translate "show all" %}</option>
+                                    <option value=".vegetables">{% translate "vegetables" %}</option>
+                                    <option value=".fruits">{% translate "fruits" %}</option>
+                                    <option value=".drinks">{% translate "drinks" %}</option>
+                                    <option value=".fishes">{% translate "fishes" %}</option>
+                                    <option value=".meats">{% translate "meats" %}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 isotope-items">
-                    {% for object in object_list %}
+                    {% for object in brand_list %}
                     <div class="col all vegetables">
                         <div class="brand-wrap">
                             <div class="brand-media">
@@ -73,7 +74,7 @@
                             </div>
                             <div class="brand-meta">
                                 <h4>{{object}}</h4>
-                                <p>(45 items)</p>
+                                <p>({{object.quantity}} {% translate "items" %})</p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="bottom-paginate">
-                                    <p class="page-info">Showing 12 of 60 Results</p>
+                                    <p class="page-info">{% translate "Showing 12 of 60 Results" %}</p>
                                     <ul class="pagination">
                                         {% if page_obj.has_previous %}
                                             <li class="page-item">

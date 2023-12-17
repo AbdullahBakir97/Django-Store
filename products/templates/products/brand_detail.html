@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'en/css/brand-single.css' %}">
 {% endblock css %}
@@ -19,7 +20,7 @@
             <div class="container">
                 <h2>Brand Single</h2>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">{% translate "Home" %}</a></li>
                     <li class="breadcrumb-item"><a href="brand-list.html">brand-list</a></li>
                     <li class="breadcrumb-item active" aria-current="page">brand-single</li>
                 </ol>
@@ -42,9 +43,9 @@
                 <li class="fas fa-star active"></li>
                 <li class="fas fa-star active"></li>
                 <li class="fas fa-star"></li>
-                <li class="total">(163 ratings)</li>
+                <li class="total">(163 {% translate "rating" %})</li>
             </ul>
-            <p>(45 items)</p>
+            <p>(45 {% translate "items" %})</p>
         </div>
         <!--=====================================
                   BRAND SINGLE PART END
@@ -60,7 +61,7 @@
                     <div class="col-lg-12">
                         <div class="top-filter">
                             <div class="filter-show">
-                                <label class="filter-label">Show :</label>
+                                <label class="filter-label">{% translate "Show" %} :</label>
                                 <select class="form-select filter-select">
                                     <option value="1">12</option>
                                     <option value="2">24</option>
@@ -68,12 +69,12 @@
                                 </select>
                             </div>
                             <div class="filter-short">
-                                <label class="filter-label">Short by :</label>
+                                <label class="filter-label">{% translate "Short by" %} :</label>
                                 <select class="form-select filter-select">
-                                    <option selected>default</option>
-                                    <option value="3">trending</option>
-                                    <option value="1">featured</option>
-                                    <option value="2">recommend</option>
+                                    <option selected>{% translate "default" %}</option>
+                                    <option value="3">{% translate "trending" %}</option>
+                                    <option value="1">{% translate "featured" %}</option>
+                                    <option value="2">{% translate "recommend" %}</option>
                                 </select>
                             </div>
                         </div>
@@ -116,7 +117,7 @@
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
-                                    <span>add</span>
+                                    <span>{% translate "Showing" %}</span>
                                 </button>
                                 <div class="product-action">
                                     <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
@@ -131,7 +132,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="bottom-paginate">
-                            <p class="page-info">Showing 12 of 60 Results</p>
+                            <p class="page-info">{% translate "Showing 12 of 60 Results" %}</p>
                             <ul class="pagination">
                                 <li class="page-item">
                                     <a class="page-link" href="#">

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-11 20:36+0100\n"
+"POT-Creation-Date: 2023-12-17 01:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,418 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-#: .\products\models.py:17
+
+#: .\orders\templates\orders\checkout.html:22
+#: .\orders\templates\orders\checkout.html:193
+#: .\products\templates\products\brand_detail.html:23
+#: .\products\templates\products\brand_list.html:25
+#: .\products\templates\products\product_detail.html:19
+#: .\products\templates\products\product_list.html:14
+#: .\templates\base.html:462 .\templates\base.html:562
+#, fuzzy
+#| msgid "home"
+msgid "Home"
+msgstr "المنزل"
+
+#: .\orders\templates\orders\checkout.html:41
+msgid "Returning customer? "
+msgstr "عودة العملاء؟"
+
+#: .\orders\templates\orders\checkout.html:41
+msgid "Click here to login<"
+msgstr "اضغط هنا للدخول<"
+
+#: .\orders\templates\orders\checkout.html:47
+msgid "Your order"
+msgstr "طلبك"
+
+#: .\orders\templates\orders\checkout.html:54
+#: .\orders\templates\orders\orderlist.html:136
+msgid "Serial"
+msgstr "المسلسل"
+
+#: .\orders\templates\orders\checkout.html:55
+#: .\orders\templates\orders\orderlist.html:137
+#, fuzzy
+#| msgid "product"
+msgid "Product"
+msgstr "المنتج"
+
+#: .\orders\templates\orders\checkout.html:56
+#: .\orders\templates\orders\orderlist.html:138 .\products\models.py:17
 msgid "Name"
 msgstr "الاسم"
+
+#: .\orders\templates\orders\checkout.html:57
+#: .\orders\templates\orders\orderlist.html:139 .\products\models.py:21
+msgid "Price"
+msgstr "السعر"
+
+#: .\orders\templates\orders\checkout.html:58
+#: .\orders\templates\orders\orderlist.html:140
+#, fuzzy
+#| msgid "Brand"
+msgid "brand"
+msgstr "العلامة التجارية"
+
+#: .\orders\templates\orders\checkout.html:59
+#: .\orders\templates\orders\orderlist.html:141
+#, fuzzy
+#| msgid "Quantity"
+msgid "quantity"
+msgstr "الكمية"
+
+#: .\orders\templates\orders\checkout.html:60
+#, fuzzy
+#| msgid "Location"
+msgid "action "
+msgstr "الموقع"
+
+#: .\orders\templates\orders\checkout.html:82
+msgid "Do you have a coupon code?"
+msgstr "هل لديك رمز القسيمة؟"
+
+#: .\orders\templates\orders\checkout.html:86
+msgid "apply"
+msgstr "تطبيق"
+
+#: .\orders\templates\orders\checkout.html:92
+#, fuzzy
+#| msgid "Subtitle"
+msgid "Sub total"
+msgstr "العنوان الفرعي"
+
+#: .\orders\templates\orders\checkout.html:96
+#: .\orders\templates\orders\orderlist.html:116
+msgid "delivery fee"
+msgstr "رسوم التوصيل"
+
+#: .\orders\templates\orders\checkout.html:100
+#: .\orders\templates\orders\orderlist.html:112
+msgid "discount"
+msgstr "خصم"
+
+#: .\orders\templates\orders\checkout.html:104
+#: .\orders\templates\orders\orderlist.html:120
+msgid "Total"
+msgstr "المجموع"
+
+#: .\orders\templates\orders\checkout.html:115
+msgid "Delivery Schedule"
+msgstr "جدول التسليم"
+
+#: .\orders\templates\orders\checkout.html:121
+msgid "express"
+msgstr "صريحة"
+
+#: .\orders\templates\orders\checkout.html:122
+#, fuzzy
+#| msgid "free home delivery"
+msgid "0 min express delivery"
+msgstr "التوصيل المجاني للمنزل"
+
+#: .\orders\templates\orders\checkout.html:127
+msgid "8am-10pm"
+msgstr "8 صباحًا - 10 مساءً"
+
+#: .\orders\templates\orders\checkout.html:128
+msgid "8.00 AM - 10.00 PM"
+msgstr "8.00 صباحًا - 10.00 مساءً"
+
+#: .\orders\templates\orders\checkout.html:133
+msgid "Next day<"
+msgstr "اليوم التالي<"
+
+#: .\orders\templates\orders\checkout.html:134
+msgid "Next day or Tomorrow"
+msgstr "اليوم التالي أو غدا"
+
+#: .\orders\templates\orders\checkout.html:144
+#, fuzzy
+#| msgid "contact us"
+msgid "contact number"
+msgstr "اتصل بنا"
+
+#: .\orders\templates\orders\checkout.html:145
+#, fuzzy
+#| msgid "contact us"
+msgid "add contact"
+msgstr "اتصل بنا"
+
+#: .\orders\templates\orders\checkout.html:151
+#: .\orders\templates\orders\checkout.html:310
+#: .\orders\templates\orders\checkout.html:393
+msgid "primary"
+msgstr "الابتدائي"
+
+#: .\orders\templates\orders\checkout.html:161
+#: .\orders\templates\orders\checkout.html:171
+#: .\orders\templates\orders\checkout.html:311
+#: .\orders\templates\orders\checkout.html:394
+msgid "secondary"
+msgstr "ثانوي"
+
+#: .\orders\templates\orders\checkout.html:186
+msgid "delivery address"
+msgstr "عنوان التسليم"
+
+#: .\orders\templates\orders\checkout.html:187
+msgid "add address"
+msgstr "إضافة عنوان"
+
+#: .\orders\templates\orders\checkout.html:203
+msgid "Office<"
+msgstr "مكتب<"
+
+#: .\orders\templates\orders\checkout.html:213
+#: .\orders\templates\orders\checkout.html:339
+#: .\orders\templates\orders\checkout.html:421
+msgid "Bussiness"
+msgstr "الأعمال"
+
+#: .\orders\templates\orders\checkout.html:228
+msgid "payment option"
+msgstr "خيار الدفع"
+
+#: .\orders\templates\orders\checkout.html:229
+#, fuzzy
+#| msgid "add to cart"
+msgid "add card"
+msgstr "إضافة إلى السلة"
+
+#: .\orders\templates\orders\checkout.html:236
+#: .\orders\templates\orders\checkout.html:250
+#: .\orders\templates\orders\checkout.html:264
+#: .\orders\templates\orders\checkout.html:364
+msgid "card number"
+msgstr "رقم البطاقة"
+
+#: .\orders\templates\orders\checkout.html:279
+msgid "By making this purchase you agree to our "
+msgstr "من خلال إجراء عملية الشراء هذه فإنك توافق على ما لدينا"
+
+#: .\orders\templates\orders\checkout.html:279
+msgid "Terms and Conditions"
+msgstr "الشروط والأحكام"
+
+#: .\orders\templates\orders\checkout.html:282
+#, fuzzy
+#| msgid "Proceed to Checkout"
+msgid "proced to checkout"
+msgstr "الشروع في الخروج"
+
+#: .\orders\templates\orders\checkout.html:304
+#, fuzzy
+#| msgid "add to cart"
+msgid "add new contact"
+msgstr "إضافة إلى السلة"
+
+#: .\orders\templates\orders\checkout.html:307
+#: .\orders\templates\orders\checkout.html:334
+#: .\orders\templates\orders\checkout.html:391
+#: .\orders\templates\orders\checkout.html:417
+#, fuzzy
+#| msgid "Subtitle"
+msgid "title"
+msgstr "العنوان الفرعي"
+
+#: .\orders\templates\orders\checkout.html:309
+#: .\orders\templates\orders\checkout.html:336
+msgid "choose title"
+msgstr "اختر العنوان"
+
+#: .\orders\templates\orders\checkout.html:315
+#: .\orders\templates\orders\checkout.html:398
+msgid "number"
+msgstr "رقم"
+
+#: .\orders\templates\orders\checkout.html:318
+msgid "save contact info"
+msgstr "حفظ معلومات الاتصال"
+
+#: .\orders\templates\orders\checkout.html:331
+msgid "add new address"
+msgstr "إضافة عنوان جديد"
+
+#: .\orders\templates\orders\checkout.html:337
+#: .\orders\templates\orders\checkout.html:419 .\templates\base.html:173
+msgid "home"
+msgstr "المنزل"
+
+#: .\orders\templates\orders\checkout.html:338
+#: .\orders\templates\orders\checkout.html:420
+#, fuzzy
+#| msgid "offers"
+msgid "office"
+msgstr "العروض"
+
+#: .\orders\templates\orders\checkout.html:340
+#: .\orders\templates\orders\checkout.html:422
+msgid "academy"
+msgstr "أكاديمية"
+
+#: .\orders\templates\orders\checkout.html:341
+#: .\orders\templates\orders\checkout.html:423
+#: .\orders\templates\orders\orderlist.html:21
+#, fuzzy
+#| msgid "offers"
+msgid "others"
+msgstr "العروض"
+
+#: .\orders\templates\orders\checkout.html:345
+#: .\orders\templates\orders\checkout.html:427
+#, fuzzy
+#| msgid "add"
+msgid "address"
+msgstr "إضافة"
+
+#: .\orders\templates\orders\checkout.html:348
+#: .\orders\templates\orders\checkout.html:430
+msgid "save address info"
+msgstr "حفظ معلومات العنوان"
+
+#: .\orders\templates\orders\checkout.html:361
+msgid "add new payment"
+msgstr "إضافة دفعة جديدة"
+
+#: .\orders\templates\orders\checkout.html:367
+msgid "save card info"
+msgstr "حفظ معلومات البطاقة"
+
+#: .\orders\templates\orders\checkout.html:388
+msgid "edit contact info"
+msgstr "تعديل معلومات الاتصال"
+
+#: .\orders\templates\orders\checkout.html:401
+msgid "save contact info<"
+msgstr "حفظ معلومات الاتصال<"
+
+#: .\orders\templates\orders\checkout.html:414
+msgid "edit address info "
+msgstr "تعديل معلومات العنوان"
+
+#: .\orders\templates\orders\orderlist.html:19 .\templates\base.html:835
+#, fuzzy
+#| msgid "Orders"
+msgid "Order History"
+msgstr "الأوامر"
+
+#: .\orders\templates\orders\orderlist.html:22
+#, fuzzy
+#| msgid "Orders"
+msgid "Orderlist"
+msgstr "الأوامر"
+
+#: .\orders\templates\orders\orderlist.html:39
+#, fuzzy
+#| msgid "total price"
+msgid "total order "
+msgstr "السعر الإجمالي"
+
+#: .\orders\templates\orders\orderlist.html:41
+#, fuzzy
+#| msgid "Short by"
+msgid "short by"
+msgstr "بمسافة قصيرة"
+
+#: .\orders\templates\orders\orderlist.html:43
+msgid "all order"
+msgstr "الأمر كله"
+
+#: .\orders\templates\orders\orderlist.html:44
+msgid "recieved order"
+msgstr "تم استلام الطلب"
+
+#: .\orders\templates\orders\orderlist.html:45
+msgid "processed order"
+msgstr "أمر معالج"
+
+#: .\orders\templates\orders\orderlist.html:46
+msgid "shipped order"
+msgstr "أمر مشحون"
+
+#: .\orders\templates\orders\orderlist.html:47
+msgid "delivered order"
+msgstr "تسليم الطلب"
+
+#: .\orders\templates\orders\orderlist.html:59
+#, fuzzy
+#| msgid "Orders"
+msgid "order"
+msgstr "الأوامر"
+
+#: .\orders\templates\orders\orderlist.html:68
+#, fuzzy
+#| msgid "order invoice"
+msgid "order recieved"
+msgstr "فاتورة الطلب"
+
+#: .\orders\templates\orders\orderlist.html:72
+#, fuzzy
+#| msgid "order invoice"
+msgid "order processed"
+msgstr "فاتورة الطلب"
+
+#: .\orders\templates\orders\orderlist.html:76
+#, fuzzy
+#| msgid "order history"
+msgid "order shipped"
+msgstr "تاريخ الطلب"
+
+#: .\orders\templates\orders\orderlist.html:80
+#, fuzzy
+#| msgid "order invoice"
+msgid "order delivered"
+msgstr "فاتورة الطلب"
+
+#: .\orders\templates\orders\orderlist.html:88
+#, fuzzy
+#| msgid "order history"
+msgid "order id"
+msgstr "تاريخ الطلب"
+
+#: .\orders\templates\orders\orderlist.html:92
+#, fuzzy
+#| msgid "total item "
+msgid "Total Item"
+msgstr "العنصر الإجمالي"
+
+#: .\orders\templates\orders\orderlist.html:96
+#, fuzzy
+#| msgid "Order Tracking"
+msgid "Order Time"
+msgstr "تتبع الطلب"
+
+#: .\orders\templates\orders\orderlist.html:100
+msgid "Delivery Time"
+msgstr "وقت التسليم"
+
+#: .\orders\templates\orders\orderlist.html:108
+msgid "Sub Total"
+msgstr "المجموع الفرعي"
+
+#: .\orders\templates\orders\orderlist.html:127
+msgid "Delivery location"
+msgstr "مكان التسليم"
+
+#: .\orders\templates\orders\orderlist.html:150
+#, fuzzy
+#| msgid "per kilo"
+msgid "kilo"
+msgstr "للكيلو"
 
 #: .\products\models.py:18
 msgid "Subtitle"
 msgstr "العنوان الفرعي"
 
 #: .\products\models.py:19
+#: .\products\templates\products\product_detail.html:133
 msgid "Description"
 msgstr "الوصف"
 
 #: .\products\models.py:20
 msgid "Image"
 msgstr "صورة"
-
-#: .\products\models.py:21
-msgid "Price"
-msgstr "السعر"
 
 #: .\products\models.py:22
 msgid "Flag"
@@ -45,10 +438,506 @@ msgstr "العلم"
 msgid "Brand"
 msgstr "العلامة التجارية"
 
-#: .\products\models.py:24
+#: .\products\models.py:24 .\templates\base.html:630
 msgid "SKU"
 msgstr "الكود"
 
 #: .\products\models.py:25
 msgid "Quantity"
 msgstr "الكمية"
+
+#: .\products\templates\products\brand_detail.html:46
+msgid "rating"
+msgstr "التقييم"
+
+#: .\products\templates\products\brand_detail.html:48
+#: .\products\templates\products\brand_list.html:77
+#: .\settings\templates\settings\home.html:80
+msgid "items"
+msgstr "العناصر"
+
+#: .\products\templates\products\brand_detail.html:64
+#: .\products\templates\products\brand_list.html:44
+#: .\products\templates\products\product_list.html:33
+msgid "Show"
+msgstr "عرض"
+
+#: .\products\templates\products\brand_detail.html:72
+#: .\products\templates\products\brand_list.html:52
+#: .\products\templates\products\product_list.html:41
+msgid "Short by"
+msgstr "بمسافة قصيرة"
+
+#: .\products\templates\products\brand_detail.html:74
+#: .\products\templates\products\product_list.html:43
+msgid "default"
+msgstr "افتراضي"
+
+#: .\products\templates\products\brand_detail.html:75
+#: .\products\templates\products\product_list.html:44
+msgid "trending"
+msgstr "تتجه"
+
+#: .\products\templates\products\brand_detail.html:76
+#: .\products\templates\products\product_list.html:45
+msgid "featured"
+msgstr "متميز"
+
+#: .\products\templates\products\brand_detail.html:77
+#: .\products\templates\products\product_list.html:46
+msgid "recommend"
+msgstr "يوصي"
+
+#: .\products\templates\products\brand_detail.html:120
+msgid "Showing"
+msgstr "العرض"
+
+#: .\products\templates\products\brand_detail.html:135
+#: .\products\templates\products\brand_list.html:87
+#: .\products\templates\products\product_list.html:113
+msgid "Showing 12 of 60 Results"
+msgstr "عرض 12 من 60 نتيجة"
+
+#: .\products\templates\products\brand_list.html:23
+#, fuzzy
+#| msgid "Brand"
+msgid "brand list"
+msgstr "العلامة التجارية"
+
+#: .\products\templates\products\brand_list.html:26
+#, fuzzy
+#| msgid "Brand"
+msgid "brand-list"
+msgstr "العلامة التجارية"
+
+#: .\products\templates\products\brand_list.html:54
+msgid "show all"
+msgstr "إظهار الكل"
+
+#: .\products\templates\products\brand_list.html:55 .\templates\base.html:227
+msgid "vegetables"
+msgstr "الخضار"
+
+#: .\products\templates\products\brand_list.html:56
+msgid "fruits"
+msgstr "الفواكه"
+
+#: .\products\templates\products\brand_list.html:57
+msgid "drinks"
+msgstr "المشروبات"
+
+#: .\products\templates\products\brand_list.html:58
+msgid "fishes"
+msgstr "الأسماك"
+
+#: .\products\templates\products\brand_list.html:59
+msgid "meats"
+msgstr "اللحوم"
+
+#: .\products\templates\products\product_detail.html:17
+#, fuzzy
+#| msgid "-blog details"
+msgid "details"
+msgstr "-تفاصيل المدونة"
+
+#: .\products\templates\products\product_detail.html:100
+#: .\templates\base.html:666
+msgid "add to cart"
+msgstr "إضافة إلى السلة"
+
+#: .\products\templates\products\product_detail.html:108
+#: .\templates\base.html:677
+msgid "add to wish"
+msgstr "إضافة إلى الرغبات"
+
+#: .\products\templates\products\product_detail.html:112
+#: .\templates\base.html:681
+msgid "Compare This"
+msgstr "قارن هذا"
+
+#: .\products\templates\products\product_detail.html:140
+msgid "Reviews"
+msgstr "المراجعات"
+
+#: .\products\templates\products\product_detail.html:167
+#, fuzzy
+#| msgid "drop your review"
+msgid "add your review"
+msgstr "أسقط رأيك"
+
+#: .\products\templates\products\product_detail.html:197
+msgid "drop your review"
+msgstr "أسقط رأيك"
+
+#: .\products\templates\products\product_detail.html:220
+msgid "related this items"
+msgstr "تعلق بهذه العناصر"
+
+#: .\products\templates\products\product_detail.html:229
+#: .\products\templates\products\product_detail.html:275
+#: .\products\templates\products\product_detail.html:323
+#: .\products\templates\products\product_detail.html:372
+#: .\products\templates\products\product_detail.html:418
+msgid "sale"
+msgstr "البيع"
+
+#: .\products\templates\products\product_detail.html:257
+#: .\products\templates\products\product_detail.html:304
+#: .\products\templates\products\product_detail.html:351
+#: .\products\templates\products\product_detail.html:400
+#: .\products\templates\products\product_detail.html:446
+#, fuzzy
+#| msgid "Price"
+msgid "piece"
+msgstr "السعر"
+
+#: .\products\templates\products\product_detail.html:261
+#: .\products\templates\products\product_detail.html:308
+#: .\products\templates\products\product_detail.html:355
+#: .\products\templates\products\product_detail.html:404
+#: .\products\templates\products\product_detail.html:450
+#: .\products\templates\products\product_list.html:96
+#: .\settings\templates\settings\home.html:141
+#: .\settings\templates\settings\home.html:220
+#: .\settings\templates\settings\home.html:303
+msgid "add"
+msgstr "إضافة"
+
+#: .\products\templates\products\product_detail.html:276
+#: .\templates\base.html:601
+msgid "new"
+msgstr "جديد"
+
+#: .\products\templates\products\product_detail.html:466
+msgid "view all related"
+msgstr "عرض كل ما يتعلق"
+
+#: .\products\templates\products\product_list.html:12
+msgid "E-Commerce"
+msgstr "التجارة الإلكترونية"
+
+#: .\settings\templates\settings\home.html:15
+#: .\settings\templates\settings\home.html:47
+#, fuzzy
+#| msgid "free home delivery"
+msgid "free home delivery within 24 hours now."
+msgstr "التوصيل المجاني للمنزل"
+
+#: .\settings\templates\settings\home.html:20
+#: .\settings\templates\settings\home.html:52
+#, fuzzy
+#| msgid "shop"
+msgid "shop now"
+msgstr "متجر"
+
+#: .\settings\templates\settings\home.html:24
+#: .\settings\templates\settings\home.html:56
+#, fuzzy
+#| msgid "offers"
+msgid "get offer"
+msgstr "العروض"
+
+#: .\settings\templates\settings\home.html:100
+msgid "recently sold items"
+msgstr "العناصر المباعة مؤخرًا"
+
+#: .\settings\templates\settings\home.html:158
+#: .\settings\templates\settings\home.html:237
+#: .\settings\templates\settings\home.html:322
+#, fuzzy
+#| msgid "home"
+msgid "show more"
+msgstr "المنزل"
+
+#: .\settings\templates\settings\home.html:178
+msgid "our featured items"
+msgstr "عناصرنا المميزة"
+
+#: .\settings\templates\settings\home.html:260
+msgid "collected new items"
+msgstr "جمع عناصر جديدة"
+
+#: .\settings\templates\settings\home.html:345
+msgid "Browse by Top Niche"
+msgstr "تصفح حسب أعلى المتخصصة"
+
+#: .\templates\base.html:79
+msgid "Welcome to Ecomart in Your Dream Online Store!"
+msgstr "  !مرحبًا بك في متجر أحلامك عبر الإنترنت"
+
+#: .\templates\base.html:105 .\templates\base.html:521
+msgid "offers"
+msgstr "العروض"
+
+#: .\templates\base.html:106
+msgid "help"
+msgstr "مساعدة"
+
+#: .\templates\base.html:107 .\templates\base.html:524
+#: .\templates\base.html:808
+msgid "contact us"
+msgstr "اتصل بنا"
+
+#: .\templates\base.html:152
+msgid "total price"
+msgstr "السعر الإجمالي"
+
+#: .\templates\base.html:176 .\templates\base.html:472
+msgid "shop"
+msgstr "متجر"
+
+#: .\templates\base.html:179
+#, fuzzy
+#| msgid "Brand"
+msgid "Brands"
+msgstr "العلامة التجارية"
+
+#: .\templates\base.html:182
+msgid "Orders"
+msgstr "الأوامر"
+
+#: .\templates\base.html:189 .\templates\base.html:534
+msgid "call us"
+msgstr "اتصل بنا"
+
+#: .\templates\base.html:196 .\templates\base.html:541
+msgid "email us"
+msgstr "راسلنا عبر البريد الإلكتروني"
+
+#: .\templates\base.html:219
+msgid "categories"
+msgstr "الفئات"
+
+#: .\templates\base.html:358 .\templates\base.html:547
+msgid "All Rights Reserved by"
+msgstr "جميع الحقوق محفوظة"
+
+#: .\templates\base.html:373
+msgid "total item "
+msgstr "العنصر الإجمالي"
+
+#: .\templates\base.html:387
+#, fuzzy
+#| msgid "Price"
+msgid "Unit Price "
+msgstr "السعر"
+
+#: .\templates\base.html:401
+msgid "Proceed to Checkout"
+msgstr "الشروع في الخروج"
+
+#: .\templates\base.html:423
+msgid "join here"
+msgstr "انضم هنا"
+
+#: .\templates\base.html:482
+msgid "product"
+msgstr "المنتج"
+
+#: .\templates\base.html:491
+msgid "my account"
+msgstr "حسابي"
+
+#: .\templates\base.html:493
+msgid "profile"
+msgstr "الملف الشخصي"
+
+#: .\templates\base.html:494
+msgid "wallet"
+msgstr "محفظة"
+
+#: .\templates\base.html:495 .\templates\base.html:575
+msgid "wishlist"
+msgstr "قائمة الرغبات"
+
+#: .\templates\base.html:496 .\templates\base.html:580
+#, fuzzy
+#| msgid "Compare This"
+msgid "compare"
+msgstr "قارن هذا"
+
+#: .\templates\base.html:497
+msgid "checkout"
+msgstr "الخروج"
+
+#: .\templates\base.html:498
+msgid "order history"
+msgstr "تاريخ الطلب"
+
+#: .\templates\base.html:499
+msgid "order invoice"
+msgstr "فاتورة الطلب"
+
+#: .\templates\base.html:500
+msgid "email template"
+msgstr "قالب البريد الإلكتروني"
+
+#: .\templates\base.html:504
+msgid "authentication"
+msgstr "المصادقة"
+
+#: .\templates\base.html:506
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#: .\templates\base.html:507
+msgid "register"
+msgstr "التسجيل"
+
+#: .\templates\base.html:508
+msgid "reset password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: .\templates\base.html:509
+msgid "change password"
+msgstr "تغيير كلمة المرور"
+
+#: .\templates\base.html:513
+msgid "blogs"
+msgstr "المدونات"
+
+#: .\templates\base.html:515
+msgid "blog grid"
+msgstr "شبكة المدونة"
+
+#: .\templates\base.html:516
+msgid "blog standard"
+msgstr "معيار المدونة"
+
+#: .\templates\base.html:517
+msgid "-blog details"
+msgstr "-تفاصيل المدونة"
+
+#: .\templates\base.html:518
+msgid "blog author"
+msgstr "مؤلف المدونة"
+
+#: .\templates\base.html:522
+msgid "about us"
+msgstr "عنا"
+
+#: .\templates\base.html:523
+#, fuzzy
+#| msgid "help"
+msgid "need help"
+msgstr "مساعدة"
+
+#: .\templates\base.html:525
+msgid "privacy policy"
+msgstr "سياسة الخصوصية"
+
+#: .\templates\base.html:526
+msgid "coming soon"
+msgstr "قريبا"
+
+#: .\templates\base.html:528
+msgid "logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\base.html:566
+#, fuzzy
+#| msgid "categories"
+msgid "category"
+msgstr "الفئات"
+
+#: .\templates\base.html:570
+msgid "cartlist"
+msgstr "قائمة العربات"
+
+#: .\templates\base.html:627
+msgid "existing product name"
+msgstr "اسم المنتج الموجود"
+
+#: .\templates\base.html:631
+msgid "BRAND"
+msgstr "العلامة التجارية"
+
+#: .\templates\base.html:643
+msgid "per kilo"
+msgstr "للكيلو"
+
+#: .\templates\base.html:655 .\templates\base.html:710
+#: .\templates\base.html:740
+msgid "Share"
+msgstr "شارك"
+
+#: .\templates\base.html:709
+#, fuzzy, python-format
+#| msgid "Get 20%% Discount for Subscriber"
+msgid "Get 20%% Discount for Subscriber"
+msgstr "احصل على خصم 20% للمشترك"
+
+#: .\templates\base.html:716
+msgid "Subscribe"
+msgstr "اشتراك"
+
+#: .\templates\base.html:739
+msgid "free home delivery"
+msgstr "التوصيل المجاني للمنزل"
+
+#: .\templates\base.html:750
+msgid "instant return policy"
+msgstr "سياسة الإرجاع الفوري"
+
+#: .\templates\base.html:761
+msgid "quick support system"
+msgstr "نظام الدعم السريع"
+
+#: .\templates\base.html:772
+msgid "secure payment way"
+msgstr "طريقة الدفع الآمنة"
+
+#: .\templates\base.html:831
+msgid "quick Links"
+msgstr "روابط سريعة"
+
+#: .\templates\base.html:834
+msgid "My Account"
+msgstr "حسابي"
+
+#: .\templates\base.html:836
+msgid "Order Tracking"
+msgstr "تتبع الطلب"
+
+#: .\templates\base.html:837
+msgid "Best Seller"
+msgstr "أفضل بائع"
+
+#: .\templates\base.html:838
+msgid "New Arrivals"
+msgstr "القادمون الجدد"
+
+#: .\templates\base.html:841
+msgid "Location"
+msgstr "الموقع"
+
+#: .\templates\base.html:842
+msgid "Affiliates"
+msgstr "الشركات التابعة"
+
+#: .\templates\base.html:843
+#, fuzzy
+#| msgid "contact us"
+msgid "Contact"
+msgstr "اتصل بنا"
+
+#: .\templates\base.html:844
+msgid "Carrer"
+msgstr "كارير"
+
+#: .\templates\base.html:845
+msgid "Faq"
+msgstr "أسئلة وأجوبة"
+
+#: .\templates\base.html:852
+msgid "Download App"
+msgstr "تحميل التطبيق"
+
+#: .\templates\base.html:853
+msgid "You Can Dwonload Our App In Appel & Play Store"
+msgstr "يمكنك تنزيل تطبيقنا في Appel"
+
+#: .\templates\base.html:864
+msgid "All Copyrights Reserved by "
+msgstr "جميع الحقوق محفوظة"
+
