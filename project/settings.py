@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'rosetta',
 
     # my apps
     'products',
@@ -190,9 +191,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOCALE_PATHS = ['locale']
 
-gettext = lambda : 5
+gettext = lambda s: s
 LANGUAGES = [
     ("ar", "Arabic"),
-    ("de", "German"),
     ("en", "English"),
+    ("de", "German"),
 ]

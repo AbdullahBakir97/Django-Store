@@ -7,8 +7,8 @@ class ProductImageInline(admin.TabularInline):
     model = ProductImages
 
 
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name','sku','flag','price','quantity']
+class ProductAdmin(TranslationAdmin):
+    list_display = [ 'id', 'name','sku','flag','price','quantity']
     list_filter = ['flag','brand']
     search_fields = ['name','subtitle','description']
     inlines = [ProductImageInline]

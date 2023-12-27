@@ -57,5 +57,5 @@ def add_reviews(n):
 
 
 #add_brands(286)
-#add_products(1471)
+add_products(1495)
 #add_reviews(300)
