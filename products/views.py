@@ -6,6 +6,8 @@ from .models import Product , Brand , Review
 from django.db.models import Q , Value , F
 from django.db.models.aggregates import Count , Min , Max , Avg , Sum
 from django.views.decorators.cache import cache_page
+from .translation import ProductTranslationOptions
+from products import translation
 
 def brand_list(request):
     data = Brand.objects.all() # query --> method --> change data main query
@@ -67,6 +69,12 @@ class ProductList(generic.ListView):
     model = Product
     paginate_by = 50
 
+    def get_queryset(self):
+        queryset = Product.objects.all()
+        if 'HTTP_ACCEPT_LANGUAGE' in self.request.META:
+            lang = self.request.META['HTTP_ACCEPT_LANGUAGE']
+            translation.activate(lang)
+        return queryset
 
 class ProductDetail(generic.DetailView):
     model = Product
