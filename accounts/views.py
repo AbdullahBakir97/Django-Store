@@ -34,7 +34,7 @@ def signup(request):
     else:
         form = SignupForm()
 
-    return render(request,'accounts/signup.html',{'form':form})
+    return render(request,'registration/signup.html',{'form':form})
 
     # signup ----> code:email ----> activate:code ----> login (activated)
 
@@ -56,4 +56,4 @@ def activate(request,username):
     else:
         form = ActivateForm()
 
-    return render(request,'accounts/activate.html',{'form':form})
+    return render(request,'registration/activate.html',{'form':form})
