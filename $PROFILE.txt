@@ -1,0 +1,10 @@
+function Get-GitStatus {
+    if (Test-Path -Path ".git" -or (git rev-parse --git-dir 2>$null)) {
+        git status
+    }
+}
+
+function Set-LocationWithGitStatus {
+    Set-Location $args[0]
+    Get-GitStatus
+}
