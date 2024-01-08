@@ -1,8 +1,10 @@
+* linguist-vendored
+*.py linguist-vendored=false
 *.py linguist-language=Python 
 *.js linguist-language=JavaScript
 *.java linguist-language=Java
 *.css linguist-language=CSS
-
+*.scss linguist-language=SCSS
 *.html linguist-language=HTML
 
 
