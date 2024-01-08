@@ -3,7 +3,9 @@ from .models import Profile
 from .forms import SignupForm , ActivateForm
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
-
+from products.models import Product , Brand , Review
+from orders.models import Order
+from django.db.models import Avg
 
 def signup(request):
 
@@ -57,3 +59,36 @@ def activate(request,username):
         form = ActivateForm()
 
     return render(request,'registration/activate.html',{'form':form})
+
+
+
+def dashboard(request):
+    # products
+    new_products = Product.objects.filter(flag='New').count()
+    sale_products = Product.objects.filter(flag='Sale').count()
+    feature_products = Product.objects.filter(flag='Feature').count()
+    
+
+    # Assuming you want to retrieve the top 10 products based on average rating
+    top_rated_products = Product.objects.annotate(avg_rating=Avg('product_review__rate')).order_by('-avg_rating')[:10]
+
+
+    # all
+    users = User.objects.all().count()
+    products = Product.objects.all().count()
+    orders = Order.objects.all().count()
+    reviews = Review.objects.all().count()
+    brands = Brand.objects.all().count()
+
+    return render(request,'accounts/dashboard.html',{
+        'new_products': new_products,
+        'sale_products': sale_products,
+        'feature_products': feature_products,
+        'top_rated_products': top_rated_products,
+        
+        'users': users , 
+        'products' : products , 
+        'orders': orders , 
+        'reviews' : reviews , 
+        'brands': brands
+    })
