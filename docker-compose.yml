@@ -1,0 +1,9 @@
+# services : celery , redis , django ,db 
+version: '3.8'
+
+services:
+  djangoserver:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
