@@ -69,7 +69,7 @@ def dashboard(request):
     feature_products = Product.objects.filter(flag='Feature').count()
     
 
-    # Assuming you want to retrieve the top 10 products based on average rating
+    # retrieve the top 10 products based on average rating
     top_rated_products = Product.objects.annotate(avg_rating=Avg('product_review__rate')).order_by('-avg_rating')[:10]
 
 
