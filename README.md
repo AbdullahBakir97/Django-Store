@@ -4,7 +4,18 @@
 [![Django](https://img.shields.io/badge/Django-4.2%2B-brightgreen)](https://www.djangoproject.com/)
 
 
-  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="40" height="40" /> <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />   <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
+  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="40" height="40" /> <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />  <img src="https://img.shields.io/badge/Django%20Rest%20Framework-008000?style=for-the-badge&logo=django&logoColor=white" alt="Django Rest Framework" width="40" height="40" />
+<img src="https://img.shields.io/badge/Django%20Queries-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django Queries" width="40" height="40" />
+ <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery" width="40" height="40" />
+ <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" width="40" height="40" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" width="40" height="40" /> <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery" width="40" height="40" /> <img src="https://img.shields.io/badge/AJAX-111111?style=for-the-badge&labelColor=111111" alt="AJAX" width="40" height="40" /> <img src="https://img.shields.io/badge/Caching-111111?style=for-the-badge&labelColor=111111" alt="Caching" width="40" height="40" /> <img src="https://img.shields.io/badge/Charts-111111?style=for-the-badge&labelColor=111111" alt="Charts" width="40" height="40" /> <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" width="40" height="40" /> <img src="https://img.shields.io/badge/Deployment-111111?style=for-the-badge&labelColor=111111" alt="Deployment" width="40" height="40" /> <img src="https://img.shields.io/badge/Translation-111111?style=for-the-badge&labelColor=111111" alt="Translation" width="40" height="40" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" width="40" height="40" />
+
+
+
+
+
+
+ 
+
   
 
 
