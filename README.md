@@ -3,14 +3,12 @@
 [![Python](https://img.shields.io/badge/Python-3.12%2B-brightgreen)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-4.2%2B-brightgreen)](https://www.djangoproject.com/)
 
-<p align="center" <a href="https://www.python.org/">
+
   <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="40" height="40" />
-   <td align="center" width="96">
-        <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />
-     <td align="center" width="96">
-        <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
-        <td align="center" width="96">
-</p>
+  <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />
+  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
+
+
 Amazon Clone Using Python , Django and Django Rest Framework with full api. Store containes Products and Products Detail, Brands, Reviews, Orders, Payments Methods, Users accounts.
 
 # Django-Store: Empowering Your E-Commerce Venture
