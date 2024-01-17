@@ -10,22 +10,23 @@
  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" width="40" height="40" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" width="40" height="40" /> <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery" width="40" height="40" /> <img src="https://img.shields.io/badge/AJAX-111111?style=for-the-badge&labelColor=111111" alt="AJAX" width="40" height="40" /> <img src="https://img.shields.io/badge/Caching-111111?style=for-the-badge&labelColor=111111" alt="Caching" width="40" height="40" /> <img src="https://img.shields.io/badge/Charts-111111?style=for-the-badge&labelColor=111111" alt="Charts" width="40" height="40" /> <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" width="40" height="40" /> <img src="https://img.shields.io/badge/Deployment-111111?style=for-the-badge&labelColor=111111" alt="Deployment" width="40" height="40" /> <img src="https://img.shields.io/badge/Translation-111111?style=for-the-badge&labelColor=111111" alt="Translation" width="40" height="40" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" width="40" height="40" />
 
 
-<img src="https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python" width="120" height="40" />
-<img src="https://img.shields.io/badge/Django-green?style=for-the-badge&logo=django&logoColor=white" alt="Django" width="120" height="40" />
-<img src="https://img.shields.io/badge/Django%20Rest%20Framework-008000?style=for-the-badge&logo=django&logoColor=white" alt="Django Rest Framework" width="190" height="40" />
-<img src="https://img.shields.io/badge/Django%20Queries-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django Queries" width="160" height="40" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" width="160" height="40" />
-<img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery" width="100" height="40" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" width="120" height="40" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" width="120" height="40" />
-<img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery" width="100" height="40" />
-<img src="https://img.shields.io/badge/AJAX-111111?style=for-the-badge&labelColor=111111" alt="AJAX" width="80" height="40" />
-<img src="https://img.shields.io/badge/Caching-111111?style=for-the-badge&labelColor=111111" alt="Caching" width="90" height="40" />
-<img src="https://img.shields.io/badge/Charts-111111?style=for-the-badge&labelColor=111111" alt="Charts" width="80" height="40" />
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" width="120" height="40" />
-<img src="https://img.shields.io/badge/Deployment-111111?style=for-the-badge&labelColor=111111" alt="Deployment" width="110" height="40" />
-<img src="https://img.shields.io/badge/Translation-111111?style=for-the-badge&labelColor=111111" alt="Translation" width="110" height="40" />
-<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" width="120" height="40" />
+![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-green?style=for-the-badge&logo=django&logoColor=white)
+![Django Rest Framework](https://assets5.lottiefiles.com/packages/lf20_jhrbgdii.json)
+![Django Queries](https://assets7.lottiefiles.com/private_files/lf30_OUblqg.json)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![jQuery](https://assets8.lottiefiles.com/packages/lf20_xi3a3G.json)
+![Docker](https://assets5.lottiefiles.com/packages/lf20_jnfwimjp.json)
+![Redis](https://assets10.lottiefiles.com/packages/lf20_jntm8rhb.json)
+![Celery](https://assets7.lottiefiles.com/packages/lf20_oiottpnh.json)
+![AJAX](https://img.shields.io/badge/AJAX-111111?style=for-the-badge&labelColor=111111)
+![Caching](https://img.shields.io/badge/Caching-111111?style=for-the-badge&labelColor=111111)
+![Charts](https://img.shields.io/badge/Charts-111111?style=for-the-badge&labelColor=111111)
+![Postman](https://assets1.lottiefiles.com/private_files/lf30_atlkyhwi.json)
+![Deployment](https://img.shields.io/badge/Deployment-111111?style=for-the-badge&labelColor=111111)
+![Translation](https://img.shields.io/badge/Translation-111111?style=for-the-badge&labelColor=111111)
+![Bootstrap](https://assets5.lottiefiles.com/packages/lf20_ghjngzcd.json)
+
 
 
 
