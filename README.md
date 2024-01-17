@@ -4,9 +4,9 @@
 [![Django](https://img.shields.io/badge/Django-4.2%2B-brightgreen)](https://www.djangoproject.com/)
 
 
-  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="40" height="40" />
-  <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />
-  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
+  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="40" height="40" /> <img src="https://techstack-generator.vercel.app/django-icon.svg" alt="icon" width="40" height="40" />   <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
+  
+
 
 
 Amazon Clone Using Python , Django and Django Rest Framework with full api. Store containes Products and Products Detail, Brands, Reviews, Orders, Payments Methods, Users accounts.
