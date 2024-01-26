@@ -56,6 +56,6 @@ def add_reviews(n):
     print(f'{n} Reviews was created successfully')
 
 
-#add_brands(286)
-add_products(1495)
-#add_reviews(300)
+add_brands(300)
+add_products(1500)
+add_reviews(300)

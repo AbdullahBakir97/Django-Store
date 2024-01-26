@@ -224,62 +224,8 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="account-card mb-0">
-                            <div class="account-title">
-                                <h4>{% translate "payment option" %}</h4>
-                                <button data-bs-toggle="modal" data-bs-target="#payment-add">{% translate "add card" %}</button>
-                            </div>
-                            <div class="account-content">
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4 alert fade show">
-                                        <div class="payment-card payment active">
-                                            <img src="images/payment/png/01.png" alt="payment">
-                                            <h4>{% translate "card number" %}</h4>
-                                            <p>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <sup>1876</sup>
-                                            </p>
-                                            <h5>miron mahmud</h5>
-                                            <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 alert fade show">
-                                        <div class="payment-card payment">
-                                            <img src="images/payment/png/02.png" alt="payment">
-                                            <h4>{% translate "card number" %}</h4>
-                                            <p>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <sup>1876</sup>
-                                            </p>
-                                            <h5>miron mahmud</h5>
-                                            <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 alert fade show">
-                                        <div class="payment-card payment">
-                                            <img src="images/payment/png/03.png" alt="payment">
-                                            <h4>{% translate "card number" %}</h4>
-                                            <p>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <span>****</span>
-                                                <sup>1876</sup>
-                                            </p>
-                                            <h5>miron mahmud</h5>
-                                            <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout-check">
-                                <input type="checkbox" id="checkout-check">
-                                <label for="checkout-check">{% translate "By making this purchase you agree to our " %}<a href="#">{% translate "Terms and Conditions" %}</a>.</label>
-                            </div>
                             <div class="checkout-proced">
-                                <a href="invoice.html" class="btn btn-inline">{% translate "proced to checkout" %}</a>
+                                <button type="button" class="btn btn-inline">{% translate "proced to checkout" %}</button>
                             </div>
                         </div>
                     </div>
@@ -436,4 +382,6 @@
                     MODAL EDIT FORM END
         =======================================-->
 
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://js.stripe.com/v3/"></script>
 {% endblock body %}

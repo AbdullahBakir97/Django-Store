@@ -3,7 +3,7 @@ from .models import Cart , CartDetail , Order , Coupon
 from products.models import Product
 from settings.models import DeliveryFee
 import datetime
-
+import stripe
 
 def order_list(request):
     orders = Order.objects.filter(user=request.user)
@@ -90,14 +90,28 @@ def checkout(request):
 
 
 def process_payment(request):
-    pass
+    checkout_session = stripe.checkout.Session.create(
+            line_items=[
+                {
+                    # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                    'price': '{{PRICE_ID}}',
+                    'quantity': 1,
+                },
+            ],
+            mode='payment',
+            success_url='127.0.0.1:8000/orders/checkout/payment/success',
+            cancel_url='127.0.0.1:8000/orders/checkout/payment/failed',
+        )
 
 
 
 def payment_success(request):
-    pass
+
+    code = ''
+    return render(request,'orders/success.html',{'code':code})
 
 
 
 def payment_failed(request):
-    pass
+    
+    return render(request,'orders/failed.html',{})

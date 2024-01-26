@@ -4,6 +4,31 @@ version: '3.8'
 services:
   djangoserver:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python dummy_data.py && python manage.py runserver 0.0.0.0:8001"
     ports:
       - "8000:8000"
+
+  myredis:
+    image: redis:7.2.3-alpine
+
+
+  celery:
+    build: .
+    command: celery -A project worker -l INFO
+    depends_on:
+      - myredis
+      - djangoserver
+
+
+  # db:
+  #   image: postgres:latest
+  #   ports: 
+  #    - "5432:5432"
+  #   volumes:
+  #   - postgres_data:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_DB: postgres
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+      

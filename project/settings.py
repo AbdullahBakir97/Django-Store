@@ -80,6 +80,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    "kolo.middleware.KoloMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     "django.middleware.locale.LocaleMiddleware",
@@ -130,6 +131,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres",
+#         "USER": "postgres",
+#         "PASSWORD": "postgres",
+#         "HOST": "db",
+#         "PORT": "5432",
+#     }
+# }
+
 
 
 # Password validation
@@ -188,6 +202,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     }
 # }
 
+# CACHES = {
+#      "default": {
+#          "BACKEND": "django.core.cache.backends.redis.RedisCache",
+#          "LOCATION": "'redis://myredis:6379'",
+#      }
+#  }
 
 
 
@@ -209,4 +229,11 @@ EMAIL_HOST = 'smtp.gmail.com'   # service
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "abdullah.bakir.204@gmail.com"
-EMAIL_HOST_PASSWORD = "txhydnysjpckaikz"
+EMAIL_HOST_PASSWORD = ""
+
+
+
+
+# celery
+CELERY_BROKER_URL = 'redis://myredis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://myredis:6379/0'

@@ -1,13 +1,16 @@
 from typing import Any
 from django.db.models.query import QuerySet
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.views import generic
+from django.contrib.auth.models import User
 from .models import Product , Brand , Review
 from django.db.models import Q , Value , F
 from django.db.models.aggregates import Count , Min , Max , Avg , Sum
 from django.views.decorators.cache import cache_page
 from .translation import ProductTranslationOptions
 from products import translation
+from .tasks import send_emails
+
 
 def brand_list(request):
     data = Brand.objects.all() # query --> method --> change data main query
@@ -59,6 +62,10 @@ def mydebug(request):
     #data = Product.objects.annotate(price_with_tax=F('price')*1.25)     # price_with_tax = name , F to add and handel column from database and add a mathematical eqution on it when data return from data base , the new column will not be added to database
 
     data = Product.objects.all()
+    
+    data = User.objects.all() # [1,2,3,4 ...... n]
+    # execute function : task 
+    send_emails.delay(data) # run task  : time 20 sec
 
     return render(request,'products/debug.html',{'data':data})
 
@@ -105,3 +112,20 @@ class BrandDetail(generic.ListView):
         context = super().get_context_data(**kwargs)
         context["brand"] = Brand.objects.get(slug=self.kwargs['slug'])
         return context
+
+
+def add_product_review(request,slug):
+    
+    
+    product = Product.objects.get(slug=slug)
+    review = request.POST['user_review']
+    rate = request.POST['rating']
+    
+    Review.objects.create(
+        user = request.user,
+        product = product,
+        rate = rate,
+        feedback = review
+    )
+    
+    return redirect(f'/products/{slug}')
