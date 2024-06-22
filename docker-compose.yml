@@ -5,7 +5,7 @@ services:
   djangoserver:
     build: .
     # command: python manage.py runserver 0.0.0.0:8000
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && python dummy_data.py && python manage.py runserver 0.0.0.0:8001"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python dummy_data.py && python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
 
